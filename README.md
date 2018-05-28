@@ -9,7 +9,7 @@ With Kotlin Toast library you can create and show Windows Toast notifications fr
 val headlineText = "Everything is awesome"
 val bodyText = "Everything is awesome when we're living our dream"
 
-val toast = ToastFactory().getInstance(ToastType.TOAST_TEXT_2, headlineText, bodyText)
+val toast = ToastFactory.getInstance(ToastType.TOAST_TEXT_2, headlineText = headlineText, bodyText = bodyText)
 NotificationManager().showToast(toast)
 ```
 
@@ -19,7 +19,8 @@ NotificationManager().showToast(toast)
 val headlineText = "Everything is awesome"
 val bodyText = "Everything is awesome when we're living our dream"
 
-NotificationManager().showToast(ToastText02(bodyText, headlineText))
+val toast = ToastText02(headlineText = headlineText, bodyText = bodyText)
+NotificationManager().showToast(toast)
 ```
 
 Package hierarchy and supported toast types may change with the next releases. To avoid build failures after a new update, please use the ToastFactory class.
