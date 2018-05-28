@@ -1,8 +1,11 @@
-package io.github.budincsevity.templates
+package io.github.budincsevity.templates.text
+
+import io.github.budincsevity.templates.BaseToast
 
 class ToastText04(bodyText: String,
                   private val bodyText2: String,
                   private val headlineText: String) : BaseToast(bodyText) {
+
     override fun toTemplate(appId: String): String {
         return """
         |@"
@@ -18,4 +21,5 @@ class ToastText04(bodyText: String,
         |"@
         """.trimMargin()
     }
+
 }
