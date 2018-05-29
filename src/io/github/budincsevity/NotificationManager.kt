@@ -2,17 +2,18 @@ package io.github.budincsevity
 
 import io.github.budincsevity.templates.BaseToast
 import java.io.File
+import java.util.UUID
 
 class NotificationManager {
     fun showToast(toast: BaseToast) {
-        val tempFile = File("temp.ps1")
+        val fileName = UUID.randomUUID().toString()
+        val tempFile = File.createTempFile(fileName, ".ps1")
 
         val psScript = getBaseScript(toast.toTemplate(APP_ID))
-
         tempFile.writeText(psScript)
 
         Runtime.getRuntime()
-                .exec("powershell.exe .\\temp.ps1")
+                .exec("""powershell.exe "${tempFile.absolutePath}"""")
                 .waitFor()
 
         tempFile.delete()
