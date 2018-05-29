@@ -6,7 +6,7 @@
 
     <groupId>io.github.budincsevity</groupId>
     <artifactId>kotlin-toast</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <description>Kotlin library for showing Windows Toast notifications</description>
     <properties>
         <kotlin.version>1.2.41</kotlin.version>
