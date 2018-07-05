@@ -5,7 +5,7 @@ With Kotlin Toast library you can create and show Windows Toast notifications fr
 
 #### Using ToastFactory (recommended)
 
-```
+```kotlin
 val headlineText = "Everything is awesome"
 val bodyText = "Everything is awesome when we're living our dream"
 
@@ -15,7 +15,7 @@ NotificationManager().showToast(toast)
 
 #### Instantiating Toast directly
 
-```
+```kotlin
 val headlineText = "Everything is awesome"
 val bodyText = "Everything is awesome when we're living our dream"
 
